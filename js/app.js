@@ -56,3 +56,21 @@ const app6 = new Vue({
         message: 'Hey change this'
     }
 })
+
+//registering a vue component
+Vue.component('todo-item', {
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
+})
+
+const app7 = new Vue({
+    el: '#app7',
+    data: {
+        groceryList: [
+            { id: 0, text: 'meat' },
+            { id: 1, text: 'milk' },
+            { id: 2, text: 'bread' },
+        ]
+    }
+})
+
